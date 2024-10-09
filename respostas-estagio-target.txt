@@ -1,0 +1,75 @@
+1) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+
+function fibonacci(num) {
+    let a = 0, b = 1, temp;
+    if (num === 0 || num === 1) return `O número ${num} pertence à sequência de Fibonacci.`;
+    
+    while (b < num) {
+        temp = a + b;
+        a = b;
+        b = temp;
+    }
+    
+    if (b === num) {
+        return `O número ${num} pertence à sequência de Fibonacci.`;
+    } else {
+        return `O número ${num} não pertence à sequência de Fibonacci.`;
+    }
+}
+
+console.log(fibonacci(13)); // Exemplo: informe o número aqui!
+
+
+2) Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+
+function countLetterA(str) {
+    let count = 0;
+    
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].toLowerCase() === 'a') {
+            count++;
+        }
+    }
+    
+    return `A letra 'a' aparece ${count} vezes.`;
+}
+
+console.log(countLetterA("Estou participando da seleçao para o estagio da Target")); // Escreva aqui!
+
+3) Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+let INDICE = 12, SOMA = 0, K = 1;
+
+while (K < INDICE) {
+    K = K + 1;
+    SOMA = SOMA + K;
+}
+
+console.log(SOMA);
+ 
+O valor da variável soma é: 77
+
+4) Descubra a lógica e complete o próximo elemento:
+
+a) 1, 3, 5, 7, 9 (sequência de números ímpares)
+
+b) 2, 4, 8, 16, 32, 64, 128 (potências de 2)
+
+c) 0, 1, 4, 9, 16, 25, 36, 49 (quadrados perfeitos: 0², 1², 2², etc.)
+
+d) 4, 16, 36, 64, 100 (quadrados perfeitos pares: 2², 4², etc.)
+
+e) 1, 1, 2, 3, 5, 8, 13 (sequência de Fibonacci)
+
+f) 2, 10, 12, 16, 17, 18, 19, 20 (sequência de números com exceção do 11 e 15)
+
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada? 
+
+1- Ligue o primeiro interruptor e espere alguns minutos.
+2- Desligue o primeiro interruptor e ligue o segundo.
+3- Vá até a sala das lâmpadas:
+A lâmpada que estiver acesa está conectada ao segundo interruptor.
+A lâmpada que estiver quente mas apagada está conectada ao primeiro interruptor.
+A lâmpada que estiver fria e apagada está conectada ao terceiro interruptor.
