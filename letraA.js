@@ -10,4 +10,4 @@ function countLetterA(str) {
     return `A letra 'a' aparece ${count} vezes.`;
 }
 
-console.log(countLetterA("Abracadabra")); // Exemplo de string
+console.log(countLetterA("Estou participando da seleçao para o estagio da Target")); // Exemplo de string
